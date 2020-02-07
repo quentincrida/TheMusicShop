@@ -9,7 +9,7 @@ public class RecorderTest {
 
     @Before
         public void before(){
-        recorder1 = new Recorder("Treble", "Rosewood", "Woodwind", "Dolmetsch", 1000);
+        recorder1 = new Recorder("Treble", "Rosewood", "Woodwind", "Dolmetsch", 1000, 750);
     }
 
     @Test
@@ -29,8 +29,12 @@ public class RecorderTest {
         assertEquals("Dolmetsch", recorder1.getMaker());
     }
     @Test
-    public void getPrice(){
-        assertEquals(1000, recorder1.getPrice(), 0.01);
+    public void getSellPrice(){
+        assertEquals(1000, recorder1.getSellPrice(), 0.01);
+    }
+    @Test
+    public void getBuyPrice(){
+        assertEquals(750, recorder1.getBuyPrice(), 0.01);
     }
     @Test
     public void getSound(){

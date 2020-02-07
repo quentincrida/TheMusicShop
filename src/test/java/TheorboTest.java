@@ -10,7 +10,7 @@ public class TheorboTest {
 
     @Before
     public void before(){
-        theorbo1 = new Theorbo(12, "Mixed woods", "Plucked Strings", "Tiger Woods", 9000.00);
+        theorbo1 = new Theorbo(12, "Mixed woods", "Plucked Strings", "Tiger Woods", 9000.00, 7000.00);
     }
 
     @Test
@@ -30,8 +30,12 @@ public class TheorboTest {
         assertEquals("Tiger Woods", theorbo1.getMaker());
     }
     @Test
-    public void getPrice(){
-        assertEquals(9000, theorbo1.getPrice(), 0.01);
+    public void getSellPrice(){
+        assertEquals(9000, theorbo1.getSellPrice(), 0.01);
+    }
+    @Test
+    public void getBuyPrice(){
+        assertEquals(7000, theorbo1.getBuyPrice(), 0.01);
     }
     @Test
     public void getSound(){

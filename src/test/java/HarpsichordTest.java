@@ -9,7 +9,7 @@ public class HarpsichordTest {
 
     @Before
     public void before(){
-        harpsichord1 = new Harpsichord("Double",1.45, "Limewood", "Keyboard", "Ruckers", 15000.00);
+        harpsichord1 = new Harpsichord("Double",1.45, "Limewood", "Keyboard", "Ruckers", 15000.00, 12000.00);
     }
     @Test
     public void getNumberOfManuals(){
@@ -32,9 +32,14 @@ public class HarpsichordTest {
         assertEquals("Ruckers", harpsichord1.getMaker());
     }
     @Test
-    public void getPrice(){
-        assertEquals(15000, harpsichord1.getPrice(), 0.01);
+    public void getSellPrice(){
+        assertEquals(15000, harpsichord1.getSellPrice(), 0.01);
     }
+    @Test
+    public void getBuyPrice(){
+        assertEquals(12000, harpsichord1.getBuyPrice(), 0.01);
+    }
+
     @Test
     public void getSound(){
         assertEquals("Tinkle tinkle little star!", harpsichord1.sound());

@@ -6,8 +6,8 @@ public class Violin extends Instrument implements IPlay {
     private int numberOfStrings;
     private String size;
 
-    public Violin(int numberOfStrings, String size, String material, String instrumentType, String maker, double price) {
-        super(material,instrumentType,maker,price);
+    public Violin(int numberOfStrings, String size, String material, String instrumentType, String maker, double sellPrice, double buyPrice) {
+        super(material,instrumentType,maker,sellPrice, buyPrice);
 
         this.numberOfStrings = numberOfStrings;
         this.size = size;

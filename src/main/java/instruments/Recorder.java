@@ -5,8 +5,8 @@ import behaviours.IPlay;
 public class Recorder extends Instrument implements IPlay {
     private String type;
 
-    public Recorder(String type, String material, String instrumentType, String maker, double price) {
-        super(material, instrumentType, maker, price);
+    public Recorder(String type, String material, String instrumentType, String maker, double sellPrice, double buyPrice) {
+        super(material, instrumentType, maker, sellPrice, buyPrice);
         this.type = type;
     }
 

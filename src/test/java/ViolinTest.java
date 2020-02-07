@@ -9,7 +9,7 @@ public class ViolinTest {
 
     @Before
     public void before() {
-        violin1 = new Violin(4, "Full size", "Mixed woods", "Stringed", "Carlo Bergonzi", 1200000.00);
+        violin1 = new Violin(4, "Full size", "Mixed woods", "Stringed", "Carlo Bergonzi", 1200000.00, 750000);
     }
         @Test
         public void getNumberOfStrings() {
@@ -32,8 +32,12 @@ public class ViolinTest {
         assertEquals("Carlo Bergonzi", violin1.getMaker());
     }
     @Test
-    public void getPrice(){
-        assertEquals(1200000.00, violin1.getPrice(), 0.01);
+    public void getSellPrice(){
+        assertEquals(1200000.00, violin1.getSellPrice(), 0.01);
+    }
+    @Test
+    public void getBuyPrice(){
+        assertEquals(750000, violin1.getBuyPrice(), 0.01);
     }
     @Test
     public void getSound(){
