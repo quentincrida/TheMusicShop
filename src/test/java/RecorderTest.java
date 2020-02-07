@@ -40,4 +40,8 @@ public class RecorderTest {
     public void getSound(){
         assertEquals("Toot toot toot!", recorder1.sound());
     }
+    @Test
+    public void calculateMarkup(){
+        assertEquals(250, recorder1.calculateMarkup(),0.01);
+    }
 }

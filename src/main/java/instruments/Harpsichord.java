@@ -2,7 +2,7 @@ package instruments;
 
 import behaviours.IPlay;
 
-public class Harpsichord extends Instrument implements IPlay {
+public class Harpsichord extends Instrument {
     private String numberOfManuals;
     private double lengthInMetres;
 
@@ -23,5 +23,6 @@ public class Harpsichord extends Instrument implements IPlay {
     public String sound(){
         return "Tinkle tinkle little star!";
     }
+
 
 }

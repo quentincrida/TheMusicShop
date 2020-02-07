@@ -1,8 +1,9 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public class Theorbo extends Instrument implements IPlay {
+public class Theorbo extends Instrument {
     private int numberOfFrets;
 
     public Theorbo(int numberOfFrets, String material, String instrumentType, String maker, double sellPrice, double buyPrice) {

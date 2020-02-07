@@ -41,4 +41,8 @@ public class TheorboTest {
     public void getSound(){
         assertEquals("Plunk plunk twang!", theorbo1.sound());
     }
+    @Test
+    public void calculateMarkup(){
+        assertEquals(2000, theorbo1.calculateMarkup(), 0.01);
+    }
 }

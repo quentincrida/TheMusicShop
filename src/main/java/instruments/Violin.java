@@ -1,8 +1,7 @@
 package instruments;
 
-import behaviours.IPlay;
 
-public class Violin extends Instrument implements IPlay {
+public class Violin extends Instrument {
     private int numberOfStrings;
     private String size;
 

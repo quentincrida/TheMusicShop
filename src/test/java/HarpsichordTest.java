@@ -44,4 +44,8 @@ public class HarpsichordTest {
     public void getSound(){
         assertEquals("Tinkle tinkle little star!", harpsichord1.sound());
     }
+    @Test
+    public void calculateMarkup(){
+        assertEquals(3000, harpsichord1.calculateMarkup(),0.01);
+    }
 }

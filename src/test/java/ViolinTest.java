@@ -43,4 +43,8 @@ public class ViolinTest {
     public void getSound(){
         assertEquals("It depends who's playing", violin1.sound());
     }
+    @Test
+    public void calculateMarkup(){
+        assertEquals(450000, violin1.calculateMarkup(), 0.01);
+    }
 }
