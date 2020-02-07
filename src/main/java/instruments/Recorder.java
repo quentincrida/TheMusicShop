@@ -1,6 +1,8 @@
 package instruments;
 
-public class Recorder extends Instrument{
+import behaviours.IPlay;
+
+public class Recorder extends Instrument implements IPlay {
     private String type;
 
     public Recorder(String type, String material, String instrumentType, String maker, double price) {
@@ -11,4 +13,9 @@ public class Recorder extends Instrument{
     public String getType() {
         return type;
     }
+
+    public String sound() {
+        return "Toot toot toot!";
+    }
+
 }

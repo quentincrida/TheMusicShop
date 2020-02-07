@@ -35,4 +35,8 @@ public class HarpsichordTest {
     public void getPrice(){
         assertEquals(15000, harpsichord1.getPrice(), 0.01);
     }
+    @Test
+    public void getSound(){
+        assertEquals("Tinkle tinkle little star!", harpsichord1.sound());
+    }
 }

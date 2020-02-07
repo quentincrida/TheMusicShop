@@ -1,7 +1,8 @@
 package instruments;
 
-public class Theorbo extends Instrument{
-    private double price;
+import behaviours.IPlay;
+
+public class Theorbo extends Instrument implements IPlay {
     private int numberOfFrets;
 
     public Theorbo(int numberOfFrets, String material, String instrumentType, String maker, double price) {
@@ -11,6 +12,10 @@ public class Theorbo extends Instrument{
 
     public int getNumberOfFrets() {
         return numberOfFrets;
+    }
+
+    public String sound(){
+        return "Plunk plunk twang!";
     }
 
 }

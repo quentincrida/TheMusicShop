@@ -32,4 +32,8 @@ public class RecorderTest {
     public void getPrice(){
         assertEquals(1000, recorder1.getPrice(), 0.01);
     }
+    @Test
+    public void getSound(){
+        assertEquals("Toot toot toot!", recorder1.sound());
+    }
 }

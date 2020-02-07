@@ -1,6 +1,8 @@
 package instruments;
 
-public class Violin extends Instrument {
+import behaviours.IPlay;
+
+public class Violin extends Instrument implements IPlay {
     private int numberOfStrings;
     private String size;
 
@@ -17,6 +19,10 @@ public class Violin extends Instrument {
 
     public String getSize() {
         return size;
+    }
+
+    public String sound(){
+        return "It depends who's playing";
     }
 }
 

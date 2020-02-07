@@ -35,4 +35,8 @@ public class ViolinTest {
     public void getPrice(){
         assertEquals(1200000.00, violin1.getPrice(), 0.01);
     }
+    @Test
+    public void getSound(){
+        assertEquals("It depends who's playing", violin1.sound());
+    }
 }

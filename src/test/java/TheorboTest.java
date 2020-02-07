@@ -33,4 +33,8 @@ public class TheorboTest {
     public void getPrice(){
         assertEquals(9000, theorbo1.getPrice(), 0.01);
     }
+    @Test
+    public void getSound(){
+        assertEquals("Plunk plunk twang!", theorbo1.sound());
+    }
 }
