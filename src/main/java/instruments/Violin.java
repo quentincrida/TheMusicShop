@@ -1,7 +1,6 @@
 package instruments;
 
 public class Violin extends Instrument {
-    private double price;
     private int numberOfStrings;
     private String size;
 
