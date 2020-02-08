@@ -1,4 +1,6 @@
+import accessories.ViolinStrings;
 import behaviours.ISell;
+import instruments.Harpsichord;
 
 import java.util.ArrayList;
 
@@ -18,5 +20,13 @@ public class Shop {
     }
     public void stockAccessory(ISell accessory){
         this.stock.add(accessory);
+    }
+
+    public void removeInstrument(ISell instrument) {
+        this.stock.remove(instrument);
+    }
+
+    public void removeAccessory(ISell accessory) {
+        this.stock.remove(accessory);
     }
 }

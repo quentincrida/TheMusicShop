@@ -1,11 +1,11 @@
+import accessories.Sheetmusic;
 import accessories.ViolinStrings;
 import instruments.Harpsichord;
 import instruments.Instrument;
+import instruments.Violin;
 import org.junit.Before;
 import org.junit.Test;
-import sun.nio.cs.ext.ISCII91;
 
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,6 +13,8 @@ public class ShopTest {
     Shop shop;
     Harpsichord harpsichord;
     ViolinStrings violinStrings;
+    Sheetmusic sheetmusic;
+    Violin violin;
 
 
     @Before
@@ -20,6 +22,8 @@ public class ShopTest {
         shop = new Shop();
         harpsichord = new Harpsichord("Double",1.45, "Limewood", "Keyboard", "Ruckers", 15000.00, 12000.00);
         violinStrings = new ViolinStrings("Pirastro Oliv", 55, 75);
+        sheetmusic = new Sheetmusic("Bach Solo Sonatas and Partitas", 7.00, 12);
+        violin = new Violin(4, "Full size", "Mixed woods", "Stringed", "Carlo Bergonzi", 1200000.00, 750000);
 
     }
 
@@ -38,4 +42,35 @@ public class ShopTest {
         assertEquals(1, shop.countStock());
 
     }
-}
+    @Test
+    public void canRemoveInstrumentFromStock(){
+        shop.stockAccessory(violinStrings);
+        shop.stockInstrument(harpsichord);
+        shop.removeInstrument(harpsichord);
+        assertEquals(1, shop.countStock());
+    }
+    @Test
+    public void canRemoveAccessoryFromStock(){
+        shop.stockAccessory(violinStrings);
+        shop.stockInstrument(harpsichord);
+        shop.removeAccessory(violinStrings);
+        assertEquals(1, shop.countStock());
+    }
+    @Test
+    public void canRemoveViolinFromStock(){
+        shop.stockAccessory(violinStrings);
+        shop.stockInstrument(harpsichord);
+        shop.stockInstrument(violin);
+        shop.removeInstrument(violin);
+        assertEquals(2, shop.countStock());
+    }
+    @Test
+    public void canRemoveSheetmusicFromStock(){
+        shop.stockAccessory(sheetmusic);
+        shop.stockInstrument(violin);
+        shop.removeAccessory(sheetmusic);
+        assertEquals(1, shop.countStock());
+    }
+
+    }
+
