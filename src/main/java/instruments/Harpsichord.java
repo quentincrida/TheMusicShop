@@ -1,6 +1,5 @@
 package instruments;
 
-import behaviours.IPlay;
 
 public class Harpsichord extends Instrument {
     private String numberOfManuals;
