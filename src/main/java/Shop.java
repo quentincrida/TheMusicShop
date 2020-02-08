@@ -1,10 +1,10 @@
-import accessories.ViolinStrings;
 import behaviours.ISell;
-import instruments.Harpsichord;
+
+
 
 import java.util.ArrayList;
 
-public class Shop {
+public class Shop implements ISell {
 
     private ArrayList<ISell> stock;
 
@@ -29,4 +29,15 @@ public class Shop {
     public void removeAccessory(ISell accessory) {
         this.stock.remove(accessory);
     }
+    public double calculateMarkup() {
+        return sellPrice - stock.buyPrice;
+    }
+
+    public double getGrossProfit(){
+        double grossProfit = 0;
+        for(ISell iSell : this.stock){
+            grossProfit += stock.calculateMarkup();
+        }
+       return grossProfit;
+   }
 }
