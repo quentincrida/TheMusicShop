@@ -24,7 +24,18 @@ public class ShopTest {
     }
 
     @Test
-    public void checkStock(){
+    public void checkStockIsZero(){
         assertEquals(0,shop.countStock());
+    }
+    @Test
+    public void canAddInstrumentToStock(){
+        shop.stockInstrument(harpsichord);
+        assertEquals(1, shop.countStock());
+    }
+    @Test
+    public void canAddAccessoryToStock(){
+        shop.stockAccessory(violinStrings);
+        assertEquals(1, shop.countStock());
+
     }
 }
