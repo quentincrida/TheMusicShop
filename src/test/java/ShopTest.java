@@ -87,12 +87,5 @@ public class ShopTest {
         shop.stockAccessory(violinStrings);
         assertEquals(453040.0, shop.getGrossProfit(), 0.01);
     }
-//    @Test
-//    public void calculateMarkup(){
-//        shop.stockInstrument(harpsichord.harpsichord1.calculateMarkup(), 0.01);
-//        shop.stockAccessory(sheetmusic.calculateMarkup());
-//        assertEquals(3005, ());
-//    }
-
 
 }
