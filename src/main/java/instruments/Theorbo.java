@@ -1,7 +1,5 @@
 package instruments;
 
-import behaviours.IPlay;
-import behaviours.ISell;
 
 public class Theorbo extends Instrument {
     private int numberOfFrets;

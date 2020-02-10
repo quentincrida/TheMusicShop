@@ -1,5 +1,8 @@
+import behaviours.IPlay;
 import behaviours.ISell;
-
+import instruments.Harpsichord;
+import instruments.Instrument;
+import instruments.Violin;
 
 
 import java.util.ArrayList;
@@ -29,15 +32,18 @@ public class Shop  {
     public void removeAccessory(ISell accessory) {
         this.stock.remove(accessory);
     }
-//    public double calculateMarkup() {
-//        return sellPrice - stock.buyPrice;
-//    }
 //
+    public double getGrossProfit(){
+        double grossProfit = 0;
+        for(ISell iSell : this.stock){
+            grossProfit += iSell.calculateMarkup();
+        }
+       return grossProfit;
+   }
 //    public double getGrossProfit(){
 //        double grossProfit = 0;
 //        for(ISell iSell : this.stock){
-//            grossProfit += stock.calculateMarkup();
+//            grossProfit += (i);
 //        }
-//       return grossProfit;
-//   }
+//    }
 }

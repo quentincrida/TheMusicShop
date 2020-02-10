@@ -1,6 +1,5 @@
 package instruments;
 
-import behaviours.IPlay;
 
 public class Recorder extends Instrument {
     private String type;
